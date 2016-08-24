@@ -111,7 +111,6 @@
 	    }
 	    Garden.prototype = {
 	        render: function () {
-	        	console.log(1);
 	            for (var i = 0; i < this.blooms.length; i++) {
 	                this.blooms[i].draw();
 	            }
@@ -129,10 +128,10 @@
 	                }
 	            }
 	        },
-	        createRandomBloom: function (x, y) {
+	        createRandomBloom: function (x, y) { 
 	            this.createBloom(x, y, Garden.randomInt(Garden.options.bloomRadius.min, Garden.options.bloomRadius.max), Garden.randomrgba(Garden.options.color.rmin, Garden.options.color.rmax, Garden.options.color.gmin, Garden.options.color.gmax, Garden.options.color.bmin, Garden.options.color.bmax, Garden.options.color.opacity), Garden.randomInt(Garden.options.petalCount.min, Garden.options.petalCount.max));
 	        },
-	        createBloom: function (x, y, r, c, pc) {
+	        createBloom: function (x, y, r, c, pc) { //x前一朵花位置 y后一朵花位置 r角度 c颜色 pc数量
 	            new Bloom(new Vector(x, y), r, c, pc, this);
 	        },
 	        clear: function () {
@@ -142,7 +141,7 @@
 	    }
 
 	    Garden.options = {
-	        petalCount: {
+	        petalCount: {  //花瓣数量
 	            min: 8,
 	            max: 15
 	        },
@@ -160,7 +159,7 @@
 	        },
 	        density: 10,
 	        growSpeed: 1000 / 60,
-	        color: {
+	        color: {   //颜色参数
 				rmin: 128,
 				rmax: 255,
 				gmin: 0,

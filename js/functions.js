@@ -43,7 +43,7 @@ function getHeartPoint(angle) {
 }
 
 function startHeartAnimation() { //划心形动画
-	var interval = 5000;
+	var interval = 50;
 	var angle = 10;
 	var heart = new Array();
 	 var animationTimer = setInterval(function () {
